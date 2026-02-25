@@ -33,6 +33,15 @@ This project demonstrates two major types of pipeline hazards:
 | raw_hazards.asm | Demonstrates RAW data hazards and forwarding solution |
 | control_hazard.asm | Demonstrates control hazards caused by branch instructions |
 
+## RIPES Setup Instructions
+
+1. Open the RIPES desktop application
+2. Select **Assembly (RISC-V)** as input type
+3. Paste the program code into the editor
+4. Choose **5-stage in-order processor with hazard detection and forwarding**
+5. Enable **Pipeline** and **Statistics** views
+6. Run the simulation and observe CPI and pipeline behavior
+   
 ## Experiment 1: Data Hazard (RAW)
 
 ### Description
@@ -133,5 +142,6 @@ pipeline performance in real processors.
 - Alwin Biju  
 - Amith M  
 - Noel James Mathew  
+
 
 
