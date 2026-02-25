@@ -111,14 +111,6 @@ instruction address depends on the outcome of a branch.
 
 ---
 
-## Conclusion
-This project demonstrates how pipeline hazards affect execution and
-performance in a pipelined processor. Data hazards can be efficiently
-handled using forwarding techniques, while control hazards require
-pipeline control mechanisms such as flushing. Visualizing these effects
-using RIPES provides a clear understanding of modern processor behavior.
-
----
 ## Comparative Analysis (Extension)
 
 To understand the relative impact of data hazards and control hazards,
@@ -136,12 +128,23 @@ This approach helps in understanding how different hazard types affect
 pipeline performance in real processors.
 
 ---
+
+## Conclusion
+This project demonstrates how pipeline hazards affect execution and
+performance in a pipelined processor. Data hazards can be efficiently
+handled using forwarding techniques, while control hazards require
+pipeline control mechanisms such as flushing. Visualizing these effects
+using RIPES provides a clear understanding of modern processor behavior.
+
+---
+
 ## Team Members
 - Adithya Anil  
 - Ajmal S  
 - Alwin Biju  
 - Amith M  
 - Noel James Mathew  
+
 
 
 
