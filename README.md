@@ -56,6 +56,12 @@ to it.
 - Without forwarding, dependent instructions use incorrect values.
 - With hazard detection and forwarding enabled, the processor forwards
   results directly between pipeline stages, ensuring correctness.
+  
+### RAW Hazard without Forwarding
+![RAW Hazard without Forwarding](screenshots/raw_hazard_no_forwarding.png)
+
+### RAW Hazard with Forwarding
+![RAW Hazard with Forwarding](screenshots/raw_hazard_with_forwarding.png)
 
 ### Expected Register Values (With Forwarding)
 
@@ -88,6 +94,9 @@ instruction address depends on the outcome of a branch.
 - When the branch is taken, incorrectly fetched instructions are flushed
   from the pipeline.
 - This introduces wasted cycles and increases CPI.
+
+### Control Hazard due to Branch Instruction
+![Control Hazard](screenshots/control_hazard_branch.png)
 
 ### Control Hazard Characteristics
 
@@ -144,6 +153,7 @@ using RIPES provides a clear understanding of modern processor behavior.
 - Alwin Biju  
 - Amith M  
 - Noel James Mathew  
+
 
 
 
