@@ -26,6 +26,13 @@ This project demonstrates two major types of pipeline hazards:
 
 ---
 
+## Project Files
+
+| File Name | Description |
+|----------|-------------|
+| raw_hazards.asm | Demonstrates RAW data hazards and forwarding solution |
+| control_hazard.asm | Demonstrates control hazards caused by branch instructions |
+
 ## Experiment 1: Data Hazard (RAW)
 
 ### Description
@@ -40,6 +47,16 @@ to it.
 - Without forwarding, dependent instructions use incorrect values.
 - With hazard detection and forwarding enabled, the processor forwards
   results directly between pipeline stages, ensuring correctness.
+
+### Expected Register Values (With Forwarding)
+
+| Register | Value | Description |
+|---------|-------|-------------|
+| x1 | 5 | First operand |
+| x2 | 7 | Second operand |
+| x3 | 12 | x1 + x2 |
+| x4 | 17 | x3 + x1 |
+| x5 | 29 | x4 + x3 |
 
 ### Result
 - Correct output is obtained with forwarding.
@@ -62,6 +79,15 @@ instruction address depends on the outcome of a branch.
 - When the branch is taken, incorrectly fetched instructions are flushed
   from the pipeline.
 - This introduces wasted cycles and increases CPI.
+
+### Control Hazard Characteristics
+
+| Aspect | Observation |
+|------|-------------|
+| Hazard Type | Control hazard (branch) |
+| Cause | Branch decision resolved in EX stage |
+| Effect | Pipeline flush of wrong-path instructions |
+| Performance Impact | Increased CPI |
 
 ### Result
 - Control hazards cannot be completely eliminated.
@@ -107,4 +133,5 @@ pipeline performance in real processors.
 - Alwin Biju  
 - Amith M  
 - Noel James Mathew  
+
 
