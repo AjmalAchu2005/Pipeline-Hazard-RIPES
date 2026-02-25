@@ -84,10 +84,27 @@ pipeline control mechanisms such as flushing. Visualizing these effects
 using RIPES provides a clear understanding of modern processor behavior.
 
 ---
+## Comparative Analysis (Extension)
 
+To understand the relative impact of data hazards and control hazards,
+separate experiments were performed.
+
+- RAW hazards were demonstrated using dependent arithmetic instructions.
+- Control hazards were demonstrated using loop-based branch instructions.
+
+Data hazards primarily introduce stalls due to operand unavailability,
+while control hazards introduce pipeline flushes due to branch resolution.
+Both hazards increase CPI, but data hazards generally contribute more
+overhead in dependency-heavy instruction sequences.
+
+This approach helps in understanding how different hazard types affect
+pipeline performance in real processors.
+
+---
 ## Team Members
 - Adithya Anil  
 - Ajmal S  
 - Alwin Biju  
 - Amith M  
 - Noel James Mathew  
+
